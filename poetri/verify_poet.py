@@ -28,9 +28,9 @@ def verify_poet(jws, public_key_string):
 if __name__ == "__main__":
 
     if len(sys.argv)!=3:
-        print "Usage:"
-        print "verify-poet.py [ENCODED_JWT_FILE] [PUBLIC_CERT_FILE]"
-        print "Example: verify-poet.py my.jwt my_public_cert.pem"
+        print("Usage:")
+        print("verify-poet.py [ENCODED_JWT_FILE] [PUBLIC_CERT_FILE]")
+        print("Example: verify-poet.py my.jwt my_public_cert.pem")
         sys.exit(1)
     
     jwt_path = sys.argv[1]
@@ -40,6 +40,8 @@ if __name__ == "__main__":
     public_key_fh = open(public_key_path)
     jws = jwt_fh.read()
     payload = verify_poet(jws, public_key_fh.read())
+
     print(payload)
+
     public_key_fh.close()
     jwt_fh.close()
