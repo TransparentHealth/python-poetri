@@ -46,14 +46,16 @@ if __name__ == "__main__":
     #convert json to dict
     try:
         j = my_payload_fh.read()
+    
+        
         my_payload = json.loads(j)
         if type(my_payload) ==type({}):
             result = sign_poet(my_payload, my_private_key_fh.read(), issuer, expires)
         else:
             result = "JSON was not an object {}"
     except ValueError:
-        result = "Error parsing JSON"
-    
+        result = ["Error parsing JSON", str(sys.exc_info())]
+        
     
     my_payload_fh.close()        
     my_private_key_fh.close()
