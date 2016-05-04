@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import unittest, os, json
 from poetri.verify_poet import verify_poet
 
