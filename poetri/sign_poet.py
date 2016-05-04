@@ -19,7 +19,7 @@ def sign_poet(payload, private_key_string, issuer, expires=63072000):
     #Set to expire (two years is default)
     payload["exp"] = payload["iat"] + expires
     jwt_encoded = jwt.encode(payload, private_key_string, algorithm='RS256', headers=headers)
-    return jwt_encoded
+    return jwt_encoded.decode('utf-8')
 
 #Command line app.
 if __name__ == "__main__":
