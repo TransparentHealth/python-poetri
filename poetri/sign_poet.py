@@ -27,8 +27,8 @@ if __name__ == "__main__":
 
     if len(sys.argv) not in (4,5):
         print("Usage:")
-        print("sign-poet.py [PAYLOAD_JSON_FILE] [SIGNING_PRIVATE_PEM_CERTIFICATE_FILE] [ISSUER] [SECONDS_UNTIL_EXPIRY]")
-        print("Example: sign-poet.py mypayload.json my-certificate.pem example.org 31536000")
+        print("sign_poet.py [PAYLOAD_JSON_FILE] [SIGNING_PRIVATE_PEM_CERTIFICATE_FILE] [ISSUER] [SECONDS_UNTIL_EXPIRY]")
+        print("Example: sign_poet.py mypayload.json my-certificate.pem example.org 31536000")
         print("Note: 31536000 is one year from now.")
         sys.exit(1)
 
