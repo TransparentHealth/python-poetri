@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import jwt
 import sys
 from cryptography.x509 import load_pem_x509_certificate, OID_COMMON_NAME

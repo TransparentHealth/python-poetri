@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import unittest, os
 from poetri.sign_poet import sign_poet
 

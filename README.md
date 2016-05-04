@@ -1,10 +1,11 @@
 poetri
 ======
 
-A reference implementation of POET https://github.com/hhsidealab/poet in Python.
+A reference implementation of POET https://github.com/hhsidealab/poet 
+in Python2 and Python3.
 
-The library signs and verifies POET JWTs.  The libraries double as command line tools with near-identical functionality.
-
+The library signs and verifies POET JWTs.  The libraries double as 
+command line tools with near-identical functionality.
 
 
 To install type:

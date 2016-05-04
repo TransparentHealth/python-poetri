@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import jwt
 import json, sys, time
 from cryptography.hazmat.backends import default_backend
