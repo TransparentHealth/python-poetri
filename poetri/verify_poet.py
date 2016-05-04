@@ -5,7 +5,7 @@ from cryptography.hazmat.backends import default_backend
 from collections import OrderedDict
 
 def verify_poet(jws, public_key_string):
-    print("jws:", jws)
+    # print("jws:", jws)
     jws = jws.rstrip().lstrip()
     certBytes = list(public_key_string.encode())
     certificate = load_pem_x509_certificate(certBytes, default_backend())
