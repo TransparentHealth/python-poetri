@@ -4,3 +4,7 @@ build/*
 *.egg-info
 *~
 dist/*
+csr.pem
+key.pem
+my.jwt
+mypayload.json
