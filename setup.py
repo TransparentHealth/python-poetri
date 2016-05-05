@@ -20,6 +20,7 @@ setup(name="poetri",
       package_data={'':['taxonomy-license-crosswalk.csv','fiftythousand.csv']},
       scripts=['poetri/verify_poet.py',
                'poetri/sign_poet.py',
+               'poetri/sample_payload_poet.py',
                ]
       )
 
