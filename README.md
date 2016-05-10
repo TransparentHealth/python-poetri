@@ -16,6 +16,7 @@ To install type:
 
 Now try out the command line tools `verify_poet.py` and `sign_poet.py`. Just type their name for usage info.
 
+If you want a payload or header file as a sample then try `sample_payload_poet.py info`.
 
 Stay tuned for more....
 

@@ -1,3 +1,7 @@
+/my.jwt
+/key.pem
+/csr.pem
+/mypayload.json
 *.pyc
 build/*
 *.komodoproject
