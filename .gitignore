@@ -1,6 +1,14 @@
+/my.jwt
+/key.pem
+/csr.pem
+/mypayload.json
 *.pyc
 build/*
 *.komodoproject
 *.egg-info
 *~
 dist/*
+csr.pem
+key.pem
+my.jwt
+mypayload.json
