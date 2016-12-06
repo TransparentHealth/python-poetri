@@ -49,7 +49,7 @@ if __name__ == "__main__":
         j = my_payload_fh.read()
     
         
-        my_payload = json.loads(j)
+        my_payload = json.loads(j, object_pairs_hook=OrderedDict)
         if type(my_payload) ==type({}):
             result = sign_poet(my_payload, my_private_key_fh.read(), issuer, expires)
         else:
