@@ -39,14 +39,11 @@ encoded_jwt ="""eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ0cmFuc3BhcmVudGh
 
 
 
-
-
 class TestVerifyPoet(unittest.TestCase):
 
     def test_verify_poet_happy(self):
-        payload = verify_poet(encoded_jwt, test_public_key)
-        
-        """Test the POET JWT signing by ensuring exactly two periods in output."""
+        """Verify the JWT signature""" 
+        payload = verify_poet(encoded_jwt, test_public_key)        
         self.assertEquals(type(payload), type({}))
         self.assertIn('iss', payload.keys())
         self.assertEquals(payload['iss'], 'transparenthealth.org')
