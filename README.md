@@ -13,7 +13,7 @@ To install the prerequisites on Ubuntu:
 
     sudo apt-get install libssl-dev
 
-The above will varry for iOS, Redhat, etc.
+(The above instruction will differ for iOS, Redhat, etc.)
 
 To install type:
 
