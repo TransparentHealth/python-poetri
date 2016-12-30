@@ -8,6 +8,13 @@ The library signs and verifies POET JWTs.  The libraries double as
 command line tools with near-identical functionality.
 
 
+To install the prerequisites on Ubuntu:
+
+
+    sudo apt-get install libssl-dev
+
+The above will varry for iOS, Redhat, etc.
+
 To install type:
 
 
