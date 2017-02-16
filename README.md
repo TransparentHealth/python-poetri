@@ -140,5 +140,5 @@ A public key to verify the signature.
         >>> 
 
 
-If verified, the payload is returned.  (The payload is accesible without signature verification.)
+If verified, the payload is returned.  (Keep in mind the payload is accesible without signature verification using standard JWT libraries.)
 
