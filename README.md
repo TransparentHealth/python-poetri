@@ -1,35 +1,30 @@
-poetri
-======
-
+poetri - Pre OAuth Entity Trust Reference Implementation
+========================================================
 
 
 JSON Web Tokens (JWTs) are an open, industry standard RFC 7519 method for representing 
 claims securely between two parties.
 
-POET is a specific JWT designed to facilitate claims about consumer-facing health applications.
+Pre-OAuth Entity Trust (POET) is a specific JWT designed to facilitate claims about consumer-facing health applications. https://github.com/hhsidealab/poet 
 
+This is a reference implemenation for signing and verifing POET JWTs in Python2 and Python3.
 
-https://github.com/hhsidealab/poet 
-Thisin Python2 and Python3.
+It contains both libraries and command line utilities.
 
-
-The library and related command-line utilities sign and verify POET JWTs.  
-
-
-To install the prerequisites on Ubuntu:
+To install on Ubuntu Linux first install the prerequisites:
 
 
     sudo apt-get install libssl-dev
 
 (The above instruction will differ for iOS, Redhat, Windows, etc.)
 
-To install type:
+To install poetri type:
 
 
     git clone https://github.com/TransparentHealth/python-poetri.git
     python python-poetri/setup.py install
 
-Now try out the command line tools `verify_poet.py` and `sign_poet.py`. Just type their name for usage info.
+The command line tools are  `verify_poet.py` and `sign_poet.py`. Just type their name for usage info.
 
 The following section illustrates how to use the API for signing JWTs and verifing their information.
 
