@@ -44,9 +44,9 @@ class TestVerifyPoet(unittest.TestCase):
     def test_verify_poet_happy(self):
         """Verify the JWT signature""" 
         payload = verify_poet(encoded_jwt, test_public_key)        
-        self.assertEquals(type(payload), type({}))
+        self.assertEqual(type(payload), type({}))
         self.assertIn('iss', payload.keys())
-        self.assertEquals(payload['iss'], 'transparenthealth.org')
+        self.assertEqual(payload['iss'], 'transparenthealth.org')
         self.assertIn('iat', payload.keys())
         self.assertIn('exp', payload.keys())
 

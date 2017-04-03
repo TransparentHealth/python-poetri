@@ -40,7 +40,7 @@ class TestSigning(unittest.TestCase):
         result = sign_poet({"sub":"someapp.foo.com"}, test_private_key, "tranparenthealth.org", 3600)
 
         """Test the POET JWT signing by ensuring exactly two periods in output."""
-        self.assertEquals(result.count('.'), 2)
+        self.assertEqual(result.count('.'), 2)
 
 
 
