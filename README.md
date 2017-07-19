@@ -25,7 +25,7 @@ To install poetri type:
     pip install ./python-poetri
 
 The command line tools are  `sign_poet_jwk.py`, `verify_poet_jwk.py`, `verify_jws_with_jwk.py`
-and `verify_jws_with_jwk_url`. Just type their name for usage info.
+and `verify_jws_with_jwk_url.py`. Just type their name for usage info.
 
 
 More help is on the way......
