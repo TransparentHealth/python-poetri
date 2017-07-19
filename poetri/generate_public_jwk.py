@@ -4,6 +4,8 @@ import json
 import sys
 from collections import OrderedDict
 
+__author__ = 'Alan Viars @aviars'
+
 
 def gen_public(private_key_jwk):
     rsak = RSAKey(**private_key_jwk)

@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+__author__ = 'Alan Viars @aviars'
 from Crypto.PublicKey import RSA
 from jwkest.jwk import RSAKey
 import json

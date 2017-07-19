@@ -6,6 +6,8 @@ from jwkest.jws import JWS
 from jwkest.jwk import RSAKey
 from jwkest import BadSignature
 
+__author__ = 'Alan Viars @aviars'
+
 
 def verify_poet(my_jws, my_jwk_dict):
 
