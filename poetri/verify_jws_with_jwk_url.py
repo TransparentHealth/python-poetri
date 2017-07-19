@@ -59,7 +59,6 @@ if __name__ == "__main__":
         sys.exit(1)
 
     my_jwt_file = sys.argv[1]
-    issuer = sys.argv[2]
     jwt_fh = open(my_jwt_file)
 
     result = verify_poet_via_url(jwt_fh.read())
