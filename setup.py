@@ -8,7 +8,7 @@ with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(name="poetri",
-      version="0.0.3",
+      version="0.0.4",
       description="Pre-OAuth Entity Trust Reference Implementation",
       long_description="""Command line tools and libraries for signing and verifying JWTs according to https://github.com/TransparentHealth/poet.""",
       author="Alan Viars",
