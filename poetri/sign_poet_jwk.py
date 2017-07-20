@@ -1,11 +1,12 @@
 #!/usr/bin/env python
-
 from jwkest.jws import JWS
 from jwkest.jwk import RSAKey
 import json
 import sys
 import time
 from collections import OrderedDict
+
+__author__ = 'Alan Viars @aviars'
 
 
 def sign_poet(payload, private_key_jwk, issuer, expires=63072000):
