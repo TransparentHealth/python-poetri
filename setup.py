@@ -15,13 +15,12 @@ setup(name="poetri",
       author_email="sales@videntity.com",
       url="https://github.com/transparenthealth/python-poetri",
       download_url="https://github.com/transparenthealth/python-poetri/tarball/master",
-      install_requires=['jwkest', 'requests', ],
+      install_requires=['pyjwkest', 'requests', ],
       packages= ['poetri', 'tests'],
-      scripts=['poetri/verify_poet_jwk.py',
-               'poetri/verify_poet_jwk_url.py',
+      scripts=['poetri/verify_jws_with_jwk.py',
+               'poetri/verify_jws_with_jwk_url.py',
                'poetri/sign_poet_jwk.py',
                'poetri/generate_jwk_keypair.py',
-               'poetri/sample_payload_poet.py',
                'poetri/generate_public_jwk.py'
                ]
       )

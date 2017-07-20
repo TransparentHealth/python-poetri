@@ -3,7 +3,7 @@ import sys
 import json
 from jwkest.jws import JWS, NoSuitableSigningKeys
 from jwkest.jwt import JWT
-from jwkest.jwk import RSAKey
+from jwkest.jwk import RSAKey, DeSerializationNotPossible
 from jwkest import BadSignature
 import requests
 
@@ -44,7 +44,8 @@ def verify_poet_via_url(my_jws):
         retval = {"error": "The signature did not match"}
     except NoSuitableSigningKeys:
         retval = {"error": str(sys.exc_info()[1])}
-
+    except DeSerializationNotPossible:
+        retval = {"error": str(sys.exc_info()[1])}
     except:
         retval = {"error": str(sys.exc_info())}
     return retval

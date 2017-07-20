@@ -1,17 +1,17 @@
 #!/usr/bin/env python
-__author__ = 'Alan Viars @aviars'
 from Crypto.PublicKey import RSA
 from jwkest.jwk import RSAKey
 import json
 import sys
+
+__author__ = 'Alan Viars @aviars'
 
 
 def gen_jwk_keypair(kid):
     # Mint a new RSA key
     _rsakey = RSA.generate(2048)
     # Wrap it in a JWK class
-    _rsajwk = RSAKey(kid=kid, use="sig", key=_rsakey)
-
+    _rsajwk = RSAKey(kid=kid, use="sig", alg="RS256", key=_rsakey)
     return json.dumps(_rsajwk.serialize(private=True))
 
 # Command line app.
