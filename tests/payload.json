@@ -1,0 +1,14 @@
+    {
+    "software_id": "4NRB1-0XZABZI9E6-5SM3R",
+    "iss": "transparenthealth.org",
+    "client_name" : "Cardiac Risk App",
+    "client_uri": "https://apps-dstu2.smarthealthit.org/cardiac-risk/",
+    "logo_uri" : "https://gallery.smarthealthit.org/img/apps/66.png",
+    "initiate_login_uri" : "https://apps-dstu2.smarthealthit.org/cardiac-risk/launch.html",
+    "redirect_uris" : [
+          "https://apps-dstu2.smarthealthit.org/cardiac-risk/"
+       ],
+    "scope" : "openid profile patient/*.read",
+    "token_endpoint_auth_method" : "client_secret_basic",
+    "grant_types" : [ "authorization_code" ]
+    }
