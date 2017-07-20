@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+__author__ = 'Alan Viars @aviars'
 import jwt
 import sys
 from cryptography.x509 import load_pem_x509_certificate, OID_COMMON_NAME

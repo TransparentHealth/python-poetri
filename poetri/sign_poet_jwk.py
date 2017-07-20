@@ -1,11 +1,12 @@
 #!/usr/bin/env python
-
 from jwkest.jws import JWS
 from jwkest.jwk import RSAKey
 import json
 import sys
 import time
 from collections import OrderedDict
+
+__author__ = 'Alan Viars @aviars'
 
 
 def sign_poet(payload, private_key_jwk, issuer, expires=63072000):
@@ -32,7 +33,7 @@ if __name__ == "__main__":
         print("Usage:")
         print(
             "sign_poet_jwk.py [PAYLOAD_JSON_FILE] [JWK_KEYPAIR_FILE_PATH] [ISSUER] [SECONDS_UNTIL_EXPIRY]")
-        print("Example: sign_poet_jwk.py mypayload.json my-certificate.pem example.org 31536000")
+        print("Example: sign_poet_jwk.py mypayload.json keypair.jwk example.org 31536000")
         print("Note: 31536000 is one year from now.")
         sys.exit(1)
 

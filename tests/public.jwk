@@ -1,7 +1,0 @@
-{
-    "use": "sig",
-    "kid": "transparenthealth.org",
-    "e": "AQAB",
-    "kty": "RSA",
-    "n": "n_dw5Ln8YayB-00vXo3ysVRxfftyXdjm7OHisZXCvB4bMmWWBwfCWpanB6-SFh_hPsBsEooBwrWnGJXp8AAH_Gfq3-F-zOhjMhqWjzhbOB9DOxh01OdsFRTNV4hyYMU3X9HpxTOxDqH3I8ThzmQHypxM27MlX3USAsVPSGJqq_wquSyP7UokMXYb7LN03YCI7CFQe8hKyy7zJdDtPkh8m5K2Z2OOjyTUbPLzSvBNmZGNh4tRW5jzq7ONT5a062pgwIJ5n7t80BcLDytFc6bOLYBckf6lWjae_RQoKnc1UQCxYZ4gi-X69CvJfbe7gR0HFXRz1Yb8gJLJtSWtSPX74Q"
-}

@@ -3,8 +3,10 @@ import sys
 import json
 from collections import OrderedDict
 from jwkest.jws import JWS
-from jwkest.jwk import RSAKey
+from jwkest.jwk import RSAKey, DeSerializationNotPossible
 from jwkest import BadSignature
+
+__author__ = 'Alan Viars @aviars'
 
 
 def verify_poet(my_jws, my_jwk_dict):
