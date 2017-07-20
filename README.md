@@ -21,10 +21,14 @@ To install on Ubuntu Linux first install the prerequisites:
 To install poetri type:
 
 
-    git clone https://github.com/TransparentHealth/python-poetri.git
-    pip install ./python-poetri
+    >pip install python-poetri
     
-    
+To install system wide, type:
+
+    >sudo pip install python-poetri
+
+
+
 Command Line Tools
 ==================
 
