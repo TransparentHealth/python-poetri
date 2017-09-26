@@ -16,17 +16,13 @@ To install on Ubuntu Linux first install the prerequisites:
 
     $ sudo apt-get install python-dev
 
-(The above instruction will differ for iOS, Redhat, Windows, etc.)
+The above Ubuntu Linux instructions will differ on Mac, Redhat, Windows, etc. A C compier and Python development files are required for the next step to run without error. A quick Google search about your platform is better than any instructions that can be offered here.
 
-To install poetri type:
-
-
-    $ pip install python-poetri
-    
-To install system wide, type:
+To install poetri, on the command line type:
 
     $ sudo pip install python-poetri
-
+    
+You may be asked for a password.
 
 
 Command Line Tools
