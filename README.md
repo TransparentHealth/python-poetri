@@ -82,9 +82,8 @@ It outputs the public JWK to standard out `stdout`
 Signing a JWT:
 --------------
 
-You'll need to add necessary information an claims into JSON document that represent your desired payload in your JWT.
-You will supply the private key for signing.  The utility sets the `iat` (issued at), `exp` (expiration) and `iss` (issuer) based on the
-system clock and your input. It has 3 required command line arguments; `payload`, `keypair`, and `issuer`. `expiation`
+You'll need to add necessary information and claims into a JSON document that represents your desired payload in your JWT.
+You will also need to supply the private key for signing.  This utility sets the `iat` (issued at), `exp` (expiration) and `iss` (issuer) based on the system clock and your input. The required command line arguments are `payload`, `keypair`, `issuer`. `expiration`
 is optional and defaults to 31536000 (one year from now.)
 
 
