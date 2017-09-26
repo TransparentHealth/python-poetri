@@ -14,18 +14,18 @@ It contains both libraries and command line utilities.
 
 To install on Ubuntu Linux first install the prerequisites:
 
-    sudo apt-get install python-dev
+    $ sudo apt-get install python-dev
 
 (The above instruction will differ for iOS, Redhat, Windows, etc.)
 
 To install poetri type:
 
 
-    >pip install python-poetri
+    $ pip install python-poetri
     
 To install system wide, type:
 
-    >sudo pip install python-poetri
+    $ sudo pip install python-poetri
 
 
 
@@ -43,7 +43,7 @@ Minting a New Keypair
 The only positional command line argument is the key id `kid`. Its output is to standard out `stdout`.
 
 
-    >generate_jwk_keypair.py example.com
+    $ generate_jwk_keypair.py example.com
 
 ...outputs:
 
@@ -53,7 +53,7 @@ The only positional command line argument is the key id `kid`. Its output is to 
 ...or even better, redirect the output to a new file:
 
         
-        >generate_jwk_keypair.py example.com > keypair.jwk
+        $ generate_jwk_keypair.py example.com > keypair.jwk
 
 Key your private key safe!
 
@@ -66,7 +66,7 @@ Creating a Public Key from the Keypair:
 and is used to verify signatures on JWTs (a.k.a. JWKs).  Its only positional argument is the keypair file.
 It outputs the public JWK to standard out `stdout`
 
-    >generate_public_jwk.py keypair.jwk
+    $ generate_public_jwk.py keypair.jwk
     {
     "alg": "RS256",
     "kty": "RSA",
@@ -80,7 +80,7 @@ It outputs the public JWK to standard out `stdout`
 ...or redirect it to a file..
  
  
-    > generate_public_jwk.py keypair.jwk > poet.jwk
+    $ generate_public_jwk.py keypair.jwk > poet.jwk
 
 
 Signing a JWT:
@@ -141,7 +141,7 @@ It has one required, positional argument, the `jws` and outputs the payload to s
 An error is returned if not. The well-known URL is derived from the `iss` field in the payload and the details of the POET specification.     
     
 
-    >verify_jws_with_jwk_url.py 4NRB1-0XZABZI9E6-5SM3R.jws
+    $ verify_jws_with_jwk_url.py 4NRB1-0XZABZI9E6-5SM3R.jws
     The key could not be fetched
 
 That's exactly what we would expect to happen.  For this command to run as expected, I would need to place and make public the file `poet.jwk` at
