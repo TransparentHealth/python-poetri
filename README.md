@@ -66,8 +66,8 @@ Creating a Public Key from the Keypair:
 and is used to verify signatures on JWTs (a.k.a. JWKs).  Its only positional argument is the keypair file.
 It outputs the public JWK to standard out `stdout`
 
-    generate_public_jwk.py keypair.jwk
-    >{
+    >generate_public_jwk.py keypair.jwk
+    {
     "alg": "RS256",
     "kty": "RSA",
     "kid": "example.com",
