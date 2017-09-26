@@ -92,13 +92,13 @@ system clock and your input. It has 3 required command line arguments; `payload`
 is optional and defaults to 31536000 (one year from now.)
 
 
-    >sign_poet_jwk.py ../tests/payload.json keypair.jwk  example.com  315360
+    $ sign_poet_jwk.py ../tests/payload.json keypair.jwk  example.com  315360
     eyJhbGciOiJSUzI1NiIsImtpZCI6ImV4YW1wbGUuY29tIiwidHlwIjoiSldUIn0.eyJ0b2tlbl9lbmRwb2ludF9hdXRoX21ldGhvZCI6ImNsaWVudF9zZWNyZXRfYmFzaWMiLCJpc3MiOiJleGFtcGxlLmNvbSIsImNsaWVudF91cmkiOiJodHRwczovL2FwcHMtZHN0dTIuc21hcnRoZWFsdGhpdC5vcmcvY2FyZGlhYy1yaXNrLyIsImluaXRpYXRlX2xvZ2luX3VyaSI6Imh0dHBzOi8vYXBwcy1kc3R1Mi5zbWFydGhlYWx0aGl0Lm9yZy9jYXJkaWFjLXJpc2svbGF1bmNoLmh0bWwiLCJzb2Z0d2FyZV9pZCI6IjROUkIxLTBYWkFCWkk5RTYtNVNNM1IiLCJyZWRpcmVjdF91cmlzIjpbImh0dHBzOi8vYXBwcy1kc3R1Mi5zbWFydGhlYWx0aGl0Lm9yZy9jYXJkaWFjLXJpc2svIl0sImdyYW50X3R5cGVzIjpbImF1dGhvcml6YXRpb25fY29kZSJdLCJjbGllbnRfbmFtZSI6IkNhcmRpYWMgUmlzayBBcHAiLCJleHAiOjE1NjM2NTY3NTcsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgcGF0aWVudC8qLnJlYWQiLCJpYXQiOjE1MDA1ODQ3NTcsImxvZ29fdXJpIjoiaHR0cHM6Ly9nYWxsZXJ5LnNtYXJ0aGVhbHRoaXQub3JnL2ltZy9hcHBzLzY2LnBuZyJ9.GVRUGPLo_jpq3_yBBJmNmxNb6Wk9ZLhGxjRcynP7VAgQ_QlECLlR8fQWDhtwU0e33Ev0MlGKF1OB-xh5Kc3JBkX2qrtUotA1H-MsNmxhhmL1fXg4fV1R2wa6hcqcSjM1zP1iNhzLIPbbsXtq27qDivN6D5pJzrkFIOdvg1lgvmeZxttYndqpn3SUEsdwBLxi66-OWyiPeFdigAfJAtf8EyHk0picgkJZrjK0Zoa3H-Wvwa88fWYGTeFxBpjET7G2nGXdcRNKVgQ-0SDJoasJSM5uoqbJAO7A1h0zpNdFpRY9pjtem4FnN_6LLpZp8b0J0PFXaXqOAxeyU7UFTNiqOw
     
 ...redirect it to a file...
 
 
-    >sign_poet_jwk.py ../tests/payload.json keypair.jwk  example.com  315360 > 4NRB1-0XZABZI9E6-5SM3R.jws
+    $ sign_poet_jwk.py ../tests/payload.json keypair.jwk  example.com  315360 > 4NRB1-0XZABZI9E6-5SM3R.jws
     
 
 Now `4NRB1-0XZABZI9E6-5SM3R.jws` hold the endorsement that you can distribute.
@@ -110,7 +110,7 @@ It has two positional arguments; the `jws` and the public `jwk` and if the JWS
 signature is verified, then it outputs the JWK's payload to standard out `stdout`.
 
 
-    >verify_jws_with_jwk.py ./4NRB1-0XZABZI9E6-5SM3R.jws poet.jwk
+    $ verify_jws_with_jwk.py ./4NRB1-0XZABZI9E6-5SM3R.jws poet.jwk
     {
     "scope": "openid profile patient/*.read",
     "initiate_login_uri": "https://apps-dstu2.smarthealthit.org/cardiac-risk/launch.html",
