@@ -36,10 +36,10 @@ With these tools you can see POET in action and operate as an endorsing body.
 Note there are a lot of way to generate keys and work with JWTs. You could use
 other tools or roll your own. These methods are provided as a convenience.
 
-Minting a NewKeypair
+Minting a New Keypair
 ---------------------
 
-`generate_jwk_keypair.py` mints a new public and private keypair in JWT format.  This file is used to sign JWTs (a.k.a. JWSs).
+`generate_jwk_keypair.py` mints a new public and private keypair in JWK format.  This file is used to sign JWTs (a.k.a. JWSs).
 The only positional command line argument is the key id `kid`. Its output is to standard out `stdout`.
 
 
