@@ -14,19 +14,15 @@ It contains both libraries and command line utilities.
 
 To install on Ubuntu Linux first install the prerequisites:
 
-    sudo apt-get install python-dev
+    $ sudo apt-get install python-dev
 
-(The above instruction will differ for iOS, Redhat, Windows, etc.)
+The above Ubuntu Linux instructions will differ on Mac, Redhat, Windows, etc. A C compier and Python development files are required for the next step to run without error. A quick Google search about your platform is better than any instructions that can be offered here.
 
-To install poetri type:
+To install poetri, on the command line type:
 
-
-    >pip install python-poetri
+    $ sudo pip install python-poetri
     
-To install system wide, type:
-
-    >sudo pip install python-poetri
-
+You may be asked for a password.
 
 
 Command Line Tools
@@ -36,14 +32,14 @@ With these tools you can see POET in action and operate as an endorsing body.
 Note there are a lot of way to generate keys and work with JWTs. You could use
 other tools or roll your own. These methods are provided as a convenience.
 
-Minting a NewKeypair
+Minting a New Keypair
 ---------------------
 
-`generate_jwk_keypair.py` mints a new public and private keypair in JWT format.  This file is used to sign JWTs (a.k.a. JWSs).
+`generate_jwk_keypair.py` mints a new public and private keypair in JWK format.  This file is used to sign JWTs (a.k.a. JWSs).
 The only positional command line argument is the key id `kid`. Its output is to standard out `stdout`.
 
 
-    >generate_jwk_keypair.py example.com
+    $ generate_jwk_keypair.py example.com
 
 ...outputs:
 
@@ -53,7 +49,7 @@ The only positional command line argument is the key id `kid`. Its output is to 
 ...or even better, redirect the output to a new file:
 
         
-        >generate_jwk_keypair.py example.com > keypair.jwk
+        $ generate_jwk_keypair.py example.com > keypair.jwk
 
 Key your private key safe!
 
@@ -66,8 +62,8 @@ Creating a Public Key from the Keypair:
 and is used to verify signatures on JWTs (a.k.a. JWKs).  Its only positional argument is the keypair file.
 It outputs the public JWK to standard out `stdout`
 
-    generate_public_jwk.py keypair.jwk
-    >{
+    $ generate_public_jwk.py keypair.jwk
+    {
     "alg": "RS256",
     "kty": "RSA",
     "kid": "example.com",
@@ -80,25 +76,24 @@ It outputs the public JWK to standard out `stdout`
 ...or redirect it to a file..
  
  
-    > generate_public_jwk.py keypair.jwk > poet.jwk
+    $ generate_public_jwk.py keypair.jwk > poet.jwk
 
 
 Signing a JWT:
 --------------
 
-You'll need to add necessary information an claims into JSON document that represent your desired payload in your JWT.
-You will supply the private key for signing.  The utility sets the `iat` (issued at), `exp` (expiration) and `iss` (issuer) based on the
-system clock and your input. It has 3 required command line arguments; `payload`, `keypair`, and `issuer`. `expiation`
+You'll need to add necessary information and claims into a JSON document that represents your desired payload in your JWT.
+You will also need to supply the private key for signing.  This utility sets the `iat` (issued at), `exp` (expiration) and `iss` (issuer) based on the system clock and your input. The required command line arguments are `payload`, `keypair`, `issuer`. `expiration`
 is optional and defaults to 31536000 (one year from now.)
 
 
-    >sign_poet_jwk.py ../tests/payload.json keypair.jwk  example.com  315360
+    $ sign_poet_jwk.py ../tests/payload.json keypair.jwk  example.com  315360
     eyJhbGciOiJSUzI1NiIsImtpZCI6ImV4YW1wbGUuY29tIiwidHlwIjoiSldUIn0.eyJ0b2tlbl9lbmRwb2ludF9hdXRoX21ldGhvZCI6ImNsaWVudF9zZWNyZXRfYmFzaWMiLCJpc3MiOiJleGFtcGxlLmNvbSIsImNsaWVudF91cmkiOiJodHRwczovL2FwcHMtZHN0dTIuc21hcnRoZWFsdGhpdC5vcmcvY2FyZGlhYy1yaXNrLyIsImluaXRpYXRlX2xvZ2luX3VyaSI6Imh0dHBzOi8vYXBwcy1kc3R1Mi5zbWFydGhlYWx0aGl0Lm9yZy9jYXJkaWFjLXJpc2svbGF1bmNoLmh0bWwiLCJzb2Z0d2FyZV9pZCI6IjROUkIxLTBYWkFCWkk5RTYtNVNNM1IiLCJyZWRpcmVjdF91cmlzIjpbImh0dHBzOi8vYXBwcy1kc3R1Mi5zbWFydGhlYWx0aGl0Lm9yZy9jYXJkaWFjLXJpc2svIl0sImdyYW50X3R5cGVzIjpbImF1dGhvcml6YXRpb25fY29kZSJdLCJjbGllbnRfbmFtZSI6IkNhcmRpYWMgUmlzayBBcHAiLCJleHAiOjE1NjM2NTY3NTcsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgcGF0aWVudC8qLnJlYWQiLCJpYXQiOjE1MDA1ODQ3NTcsImxvZ29fdXJpIjoiaHR0cHM6Ly9nYWxsZXJ5LnNtYXJ0aGVhbHRoaXQub3JnL2ltZy9hcHBzLzY2LnBuZyJ9.GVRUGPLo_jpq3_yBBJmNmxNb6Wk9ZLhGxjRcynP7VAgQ_QlECLlR8fQWDhtwU0e33Ev0MlGKF1OB-xh5Kc3JBkX2qrtUotA1H-MsNmxhhmL1fXg4fV1R2wa6hcqcSjM1zP1iNhzLIPbbsXtq27qDivN6D5pJzrkFIOdvg1lgvmeZxttYndqpn3SUEsdwBLxi66-OWyiPeFdigAfJAtf8EyHk0picgkJZrjK0Zoa3H-Wvwa88fWYGTeFxBpjET7G2nGXdcRNKVgQ-0SDJoasJSM5uoqbJAO7A1h0zpNdFpRY9pjtem4FnN_6LLpZp8b0J0PFXaXqOAxeyU7UFTNiqOw
     
 ...redirect it to a file...
 
 
-    >sign_poet_jwk.py ../tests/payload.json keypair.jwk  example.com  315360 > 4NRB1-0XZABZI9E6-5SM3R.jws
+    $ sign_poet_jwk.py ../tests/payload.json keypair.jwk  example.com  315360 > 4NRB1-0XZABZI9E6-5SM3R.jws
     
 
 Now `4NRB1-0XZABZI9E6-5SM3R.jws` hold the endorsement that you can distribute.
@@ -110,7 +105,7 @@ It has two positional arguments; the `jws` and the public `jwk` and if the JWS
 signature is verified, then it outputs the JWK's payload to standard out `stdout`.
 
 
-    >verify_jws_with_jwk.py ./4NRB1-0XZABZI9E6-5SM3R.jws poet.jwk
+    $ verify_jws_with_jwk.py ./4NRB1-0XZABZI9E6-5SM3R.jws poet.jwk
     {
     "scope": "openid profile patient/*.read",
     "initiate_login_uri": "https://apps-dstu2.smarthealthit.org/cardiac-risk/launch.html",
@@ -141,7 +136,7 @@ It has one required, positional argument, the `jws` and outputs the payload to s
 An error is returned if not. The well-known URL is derived from the `iss` field in the payload and the details of the POET specification.     
     
 
-    >verify_jws_with_jwk_url.py 4NRB1-0XZABZI9E6-5SM3R.jws
+    $ verify_jws_with_jwk_url.py 4NRB1-0XZABZI9E6-5SM3R.jws
     The key could not be fetched
 
 That's exactly what we would expect to happen.  For this command to run as expected, I would need to place and make public the file `poet.jwk` at
