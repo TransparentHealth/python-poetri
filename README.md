@@ -51,7 +51,7 @@ The only positional command line argument is the key id `kid`. Its output is to 
         
         $ generate_jwk_keypair.py example.com > keypair.jwk
 
-Key your private key safe!
+Keep your private key safe!
 
 
 
